@@ -1,0 +1,21 @@
+.single-pic {
+  background-color: black;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.single-pic img {
+  border: none;
+  box-shadow: none;
+  margin: 0 auto;
+  display: block;
+}
+
+button {
+  width: 100%;
+  height: 3em;
+  background-color: black;
+  color: white;
+  border: none;
+}
