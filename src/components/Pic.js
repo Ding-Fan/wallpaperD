@@ -7,7 +7,6 @@ class Pic extends React.Component {
       <div>
           <img
             src={this.props.src}
-            onClick={() => this.props.viewPicHandle(this.props.src)}
             alt=""
           />
       </div>
