@@ -1,3 +1,3 @@
 # wallpaperD
 
-Website for mobile device find wallpapers.
+Website for mobile device to find wallpapers.

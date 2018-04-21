@@ -30,7 +30,9 @@ body {
   font-size: large;
 }
 
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+button.load-more {
+  width: 100%;
+  height: 3em;
+  background-color: #fefefe;
+  color: #d2b493;
 }

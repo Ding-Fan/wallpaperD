@@ -10,5 +10,6 @@ li {
 img {
   border: 5px solid rgba(254, 254, 254);
   box-shadow: 1px 1px 5px #333333;
-  width: 100%;
+  max-width: 100%;
+  max-height: 100vh;
 }

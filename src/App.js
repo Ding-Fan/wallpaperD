@@ -4,11 +4,13 @@ import "./css/App.css";
 import Axios from "axios";
 
 import Pic from "./components/Pic";
+import PicView from "./components/PicView";
 
 class App extends Component {
   state = {
     pics: [],
-    loading: true
+    loading: true,
+    picView: ""
   };
 
   getPic = () => {
@@ -23,7 +25,8 @@ class App extends Component {
       params: {
         client_id,
         query: "wallpaper",
-        per_page: 30
+        per_page: 30,
+        page: 1
       }
     })
       .then(response => {
@@ -36,6 +39,14 @@ class App extends Component {
       });
   };
 
+  viewPic = picSrc => {
+    this.setState({ picView: picSrc });
+  };
+
+  exitViewPic = () => {
+    this.setState({ picView: ''});
+  }
+
   componentDidMount() {
     this.getPic();
   }
@@ -45,6 +56,10 @@ class App extends Component {
       return <h3>Loading</h3>;
     }
 
+    if (this.state.picView) {
+      return <PicView src={this.state.picView} />;
+    }
+
     return (
       <div className="App">
         <ul>
@@ -52,6 +67,9 @@ class App extends Component {
             <Pic key={index} src={pic.urls.regular} />
           ))}
         </ul>
+        <div>
+          <button className="load-more">Load More!</button>
+        </div>
       </div>
     );
   }
